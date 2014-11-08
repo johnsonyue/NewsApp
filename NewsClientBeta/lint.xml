@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src\johnsonyue\project\newsclientbeta\NewsDetailActivity.java" />
+        <ignore path="src\johnsonyue\project\newsclientbeta\RegisterActivity.java" />
+        <ignore path="src\johnsonyue\project\newsclientbeta\SearchActivity.java" />
+        <ignore path="src\johnsonyue\project\newsclienttest\SearchActivity.java" />
+    </issue>
+    <issue id="ShowToast" severity="ignore" />
+    <issue id="SimpleDateFormat">
+        <ignore path="src\johnsonyue\project\newsclientbeta\NewsDetailActivity.java" />
+    </issue>
+</lint>

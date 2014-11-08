@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NewsClientBeta</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hint">HINT</string>
+    <string name="title">DAILY NEWS</string>
+    <string name="long_hint">
+"	日本媒体最近报道，朝鲜最高领导人金正恩在神隐40天中，除了养病之外，可能还处决了12名高级官员，这是他巩固政权的一个方式。此外朝鲜最近也加强了对中国和日本不友好的宣传。
+
+　　日本右翼媒体《产经新闻》21日的报道称，从10月6日开始，朝鲜就陆续处决12名高层干部，其中包括10名情报人员，以及2名党的书记。
+
+　　该报引述内部人士的话说，6日的处决地在朝鲜首都平壤郊外的姜健综合军官学院射击场。国家安全保卫部的秘密警察处决了10人，其中包括3名来自朝鲜劳动党中央的课长级官员。10月11日，包括南部黄海南道海洲市的党责任书记等2人也被处决。
+
+　　这名未透露姓名的消息源介绍，这与去年12月底金正恩迅速拿下叔父张成泽，并将其快速处死的事件一脉相承。被处决的这几个人据说罪名也与张成泽类似。
+
+　　另外该报也报道称，最近朝鲜方面正在从德国购入大量的窃听装置，对更大范围内的官员进行窃听，以强化统治。
+
+　　有消息说，2012年6月金正恩也有23天时间从公众视线里消失，结果不久之后掌握军权的总参谋长李英浩就被免职。金日成和金正日时代也曾经常在神隐期间安排一些肃清行为。所以在日本媒体看来，金正恩一方面在40天的隐身期间疗伤，一方面也在加强对权力的巩固。
+
+　　该媒体还报道，朝鲜各级高层也接到金正恩的“指示”，指出“日本是百年宿敌，中国是千年宿敌”，显示金正恩地位与朝鲜思想教育的强化。
+
+　　大公网此前曾报道，金正恩上任3年来中朝关系确实显得比较低调。但中朝双方表面上依然维持着“准盟友”的关系。比如朝鲜国庆，习近平、李克强和张德江发联名贺电致意。也有专家表示，对朝鲜高层内部的对华真实看法，确实很难证实。但从朝鲜最近加强周边外交和全球外交来看，有避免过度依赖中国的意味。
+
+　　日本媒体也认为，在金正恩这种意识形态指导下，本来朝鲜和日本之间围绕绑架问题达成的调查协议可能面临一定的推进困难。"
+    </string>
+	<string name="comment">Comment</string>
+	<string name="submit">Submit</string>
+	<string name="search">Search</string>
+	<string name="search_news">Search News</string>
+	<string name="comment_demo">
+"不要黑我家三胖，三胖就是我男神，三胖就是帅，时尚时尚最时尚，有了滑板鞋天黑都不怕。
+回家的路上我情不自禁
+摩擦 摩擦
+在这光滑的地上摩擦"
+	</string>
+	<string name="login">Login</string>
+	<string name="register">Register</string>
+    <string name="nick_name">NickName</string>
+    <string name="mailbox">MailBox</string>
+    <string name="password">Password</string>
+    <string name="name_hint">Your Nick Name here</string>
+    <string name="password_hint">Your Password here</string>
+    <string name="mailbox_hint">Your Mailbox address</string>
+    <string name="remember_me">Remember Me</string>
+</resources>

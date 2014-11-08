@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categories">
+        <item>Google</item>
+        <item>Yahoo</item>
+        <item>CNN</item>
+        <item>China</item>
+        <item>BBC</item>
+        <item>CCTV</item>
+        <item>Daily</item>
+        <item>Youtube</item>
+        <item>Google</item>
+        <item>Gmail</item>
+    </string-array>
+</resources>

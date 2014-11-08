@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:focusable="true"  
+   	android:focusableInTouchMode="true"
+     >
+    <TextView
+       	android:id="@+id/title_text"
+       	android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:gravity="left"
+       	android:hint="@string/hint"
+       	android:textAppearance="@style/titlebar_title_style"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+    ></TextView>
+    
+    <TextView
+        android:id="@+id/detail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/hint"
+        android:layout_below="@id/title_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+    ></TextView>
+    
+    <ImageView
+        android:id="@+id/seperator_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/list_seperator"
+		android:layout_below="@id/detail_text"
+		android:layout_marginTop="5dp"        
+        android:contentDescription="@string/hint"/>
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seperator_line"
+        android:background="@color/white"
+        android:layout_marginBottom="45dp"
+        >
+        <TextView
+        	android:id="@+id/body_text"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="5dp"
+        	android:layout_marginRight="5dp"
+        	android:textAppearance="@style/body_text_style"
+        ></TextView>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/comment_edit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="@string/comment"
+        android:layout_marginRight="90dp"
+        ></EditText>
+    <Button
+        android:layout_toRightOf="@id/comment_edit"
+        android:id="@+id/submit_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="-90dp"
+        android:background="@drawable/comment"
+        ></Button>
+    <Button
+        android:id="@+id/view_comment_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@id/submit_btn"
+        android:background="@drawable/view_comments"
+        ></Button>
+	</RelativeLayout>
+	
+	<ProgressBar
+	    android:id="@+id/detail_pro_bar"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	     ></ProgressBar>
+</RelativeLayout>
