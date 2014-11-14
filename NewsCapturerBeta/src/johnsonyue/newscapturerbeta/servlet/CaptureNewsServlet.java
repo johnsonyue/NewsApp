@@ -2,6 +2,8 @@ package johnsonyue.newscapturerbeta.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,14 +31,34 @@ public class CaptureNewsServlet extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
+		response.setIntHeader("Refresh", 60);
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
 		NewsDAO newsDAO =new NewsDAO();
 		String msg=newsDAO.captureNews();
 		
-		out.println("Msg: "+msg);
+		Calendar calendar = new GregorianCalendar();
+	    String am_pm;
+	    int hour = calendar.get(Calendar.HOUR);
+	    int minute = calendar.get(Calendar.MINUTE);
+	    int second = calendar.get(Calendar.SECOND);
+	    if(calendar.get(Calendar.AM_PM) == 0)
+	      am_pm = "AM";
+	    else
+	      am_pm = "PM";
+	 
+	    String CT = hour+":"+ minute +":"+ second +" "+ am_pm;
+		
+		String title = "Msg: "+msg;
+		
+		out.println(
+		        "<html>\n" +
+		        "<body bgcolor=\"#f0f0f0\">\n" +
+		        "<h1 align=\"center\">" + title + "</h1>\n" +
+		        "<p>" + newsDAO.getCount() + " added.</p>\n"+
+		        "<p>Current Time is: " + CT + "</p>\n");
 		out.flush();
 		out.close();
 	}
