@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="categories">
-        <item>Google</item>
-        <item>Yahoo</item>
-        <item>CNN</item>
-        <item>China</item>
-        <item>BBC</item>
-        <item>CCTV</item>
-        <item>Daily</item>
-        <item>Youtube</item>
-        <item>Google</item>
-        <item>Gmail</item>
+        <item>国内</item>
+        <item>国际</item>
+        <item>体育</item>
+        <item>娱乐</item>
+        <item>游戏</item>
+        <item>科技</item>
+        <item>财经</item>
+        <item>军事</item>
     </string-array>
 </resources>
