@@ -3,6 +3,7 @@ package johnsonyue.newscapturerbeta.dao;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,10 +24,8 @@ public class NewsDAO {
 	private DBHelper helper;
 	private String msg="done.";
 	
-	public String captureNews(){
+	public void capture(int category, String rss){
 		ArrayList<Map<String, Object>> newsList=new ArrayList<Map<String, Object>>();
-		
-		String rss="http://rss.sina.com.cn/roll/sports/hot_roll.xml";
 		
 		RSSParser parser=new RSSParser();
 		RSSHandler handler=new RSSHandler();
@@ -38,24 +37,61 @@ public class NewsDAO {
 		}catch(Exception e){
 			e.printStackTrace();
 			msg+=e.getMessage();
-			return msg;
+			return;
 		}
 		
 		RSSChannel channel=handler.getRSSChannel();
 		List<RSSItem> list=channel.getItems();
+		
+		helper=new DBHelper();
+		Connection conn=helper.getConnection();
+		String lastDate="";
+		String sql3="select * from news where category="+category+" order by date desc limit 1";
+		try{
+			PreparedStatement ps3=conn.prepareStatement(sql3);
+			ResultSet rs3=ps3.executeQuery();
+			rs3.next();
+			lastDate=rs3.getString("date");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
 		for(RSSItem item : list){
 			Map<String, Object> t = new HashMap<String, Object>();
+			String date=parseDate(item.getDate());
+			if(date.compareTo(lastDate)<=0){
+				continue;
+			}
 			
-			t.put("title",item.getTitle());
-			t.put("date",item.getDate());
+			t.put("title", item.getTitle());
+			t.put("category", category);
+			t.put("date",date);
 			t.put("source", item.getAuthor());
 			t.put("body", parseHtml(item.getLink()));
-			//t.put("body", item.getLink());
+			t.put("link",item.getLink());
 			
 			newsList.add(t);
 		}
 		
 		update(newsList);
+	}
+	
+	public String captureNews(){
+
+		String[] rss={
+				"http://rss.sina.com.cn/news/china/focus15.xml",
+				"http://rss.sina.com.cn/news/world/focus15.xml",
+				"http://rss.sina.com.cn/roll/sports/hot_roll.xml",
+				"http://rss.sina.com.cn/ent/hot_roll.xml",
+				"http://rss.sina.com.cn/games/djyx.xml",
+				"http://rss.sina.com.cn/news/allnews/tech.xml",
+				"http://rss.sina.com.cn/roll/finance/hot_roll.xml",
+				"http://rss.sina.com.cn/roll/mil/hot_roll.xml"
+		};
+		
+		for(int i=0;i<rss.length;i++){
+			capture(i+1,rss[i]);
+		}
 		
 		return msg;
 	}
@@ -65,14 +101,18 @@ public class NewsDAO {
 		
 		Document doc = null;
 		try {
-			doc = Jsoup.connect(url).get();
+			doc = Jsoup.connect(url).timeout(5000).get();
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "Error.";
 		}
-		Elements article=doc.select("div[id=artibody]");
+		Elements article=doc.select("div[id=artibody] > p");
+		
+		if(article==null){
+			return "";
+		}
 		for(Element t : article){
-			text+=t.text();
+			text+=t.text()+"\n";
 		}
 		
 		return text;
@@ -84,9 +124,13 @@ public class NewsDAO {
 		
 		for(Map<String, Object> t : newsList){
 			String sql="set names \"utf8\"";
-			String sql2="insert into news value(null,1,\""+t.get("title")+"\","+"\"china\",\""
-						+t.get("date")+"\",\""+t.get("source")+"\",\""+t.get("body")+"\",\"null\")";
-			msg+="\nsql: "+sql2;
+			String body=(String) t.get("body");
+			if(body==null||body.equals("")){
+				continue;
+			}
+			String sql2="insert into news value(null,"+t.get("category")+",\""+t.get("title")+"\","+"\"china\",\""
+						+t.get("date")+"\",\""+t.get("source")+"\",\""+body+"\",\"null\")";
+			
 			try {
 				PreparedStatement ps=conn.prepareStatement(sql);
 				ps.execute();
@@ -94,10 +138,23 @@ public class NewsDAO {
 				ps2.execute();
 			} catch (Exception e) {
 				e.printStackTrace();
-				msg+=e.getMessage();
 			}
 		}
 		
 		helper.closeDB();
+	}
+	
+	private String parseDate(String date){
+		String result="";
+		String[] months={"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
+		Map<String,String> monthsMap=new HashMap<String,String>();
+		for(int i=0;i<months.length;i++){
+			monthsMap.put(months[i],""+(i+1));
+		}
+		
+		String[] t=date.split("[ ]");
+		result+=t[3]+"-"+monthsMap.get(t[2])+"-"+t[1]+" "+t[4];
+		
+		return result;
 	}
 }
