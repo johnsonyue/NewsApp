@@ -46,7 +46,7 @@ public class NewsDAO {
 		Connection conn=helper.getConnection();
 		ArrayList<HashMap<String,Object>> news=new ArrayList<HashMap<String,Object>>();
 		
-		String sql="select * from news where category="+category;
+		String sql="select * from news where category="+category+" order by date desc";
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ResultSet rs=ps.executeQuery();
