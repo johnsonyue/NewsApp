@@ -32,7 +32,7 @@ public class CaptureNewsServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		response.setIntHeader("Refresh", 60);
+		//response.setIntHeader("Refresh", 600);
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		
@@ -58,6 +58,7 @@ public class CaptureNewsServlet extends HttpServlet {
 		        "<body bgcolor=\"#f0f0f0\">\n" +
 		        "<h1 align=\"center\">" + title + "</h1>\n" +
 		        "<p>" + newsDAO.getCount() + " added.</p>\n"+
+		        "<p>" + newsDAO.getFailed() + " failed.</p>\n"+
 		        "<p>Current Time is: " + CT + "</p>\n");
 		out.flush();
 		out.close();

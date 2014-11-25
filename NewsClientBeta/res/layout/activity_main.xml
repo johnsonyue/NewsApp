@@ -64,7 +64,6 @@
         android:layout_below="@id/category_bar_layout"
         android:cacheColorHint="#00000000"
         android:divider="@drawable/list_seperator"
-        android:scrollbars="none"
         android:listSelector="@drawable/list_selector"
 	    ></ListView>
 	
