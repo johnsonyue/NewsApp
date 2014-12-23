@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>GreetingServlet</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.GreetingServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetNewsServlet</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.GetNewsServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>GetSpecNewsServlet</servlet-name>
+  	<servlet-class>johnsonyue.newsserver.servlet.GetSpecNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CommentServlet</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.CommentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetCommentsServlet</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.GetCommentsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetSearchResult</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.GetSearchResult</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetMoreNewsServlet</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.GetMoreNewsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetLatestNews</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.GetLatestNews</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetNewerNewsServlet</servlet-name>
+    <servlet-class>johnsonyue.newsserver.servlet.GetNewerNewsServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+  
+  <servlet-mapping>
+    <servlet-name>GreetingServlet</servlet-name>
+    <url-pattern>/greeting</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetNewsServlet</servlet-name>
+    <url-pattern>/getNews</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetSpecNewsServlet</servlet-name>
+    <url-pattern>/getSpecNews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CommentServlet</servlet-name>
+    <url-pattern>/comment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetCommentsServlet</servlet-name>
+    <url-pattern>/getComments</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSearchResult</servlet-name>
+    <url-pattern>/getSearchResult</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetMoreNewsServlet</servlet-name>
+    <url-pattern>/getMoreNews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetLatestNews</servlet-name>
+    <url-pattern>/getLatestNews</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetNewerNewsServlet</servlet-name>
+    <url-pattern>/getNewerNews</url-pattern>
+  </servlet-mapping>
+</web-app>

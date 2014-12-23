@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="main_background_value" format="reference"></attr>
+    <attr name="title_bar_background_value" format="reference"></attr>
+    <attr name="category_bar_background_value" format="reference"></attr>
+    <attr name="edit_text_background_value" format="reference"></attr>
+    <attr name="text_view_background_value" format="color"></attr>
+    <attr name="body_text_style_value" format="reference"></attr>
+    <attr name="button_color_value" format="reference"></attr>
+    <attr name="button_text_color_value" format="color"></attr>
+    <attr name="edit_background_value" format="reference"></attr>
+    <attr name="check_box_background_value" format="reference"></attr>
+    <attr name="radio_btn_text_color_value" format="color"></attr>
+</resources>

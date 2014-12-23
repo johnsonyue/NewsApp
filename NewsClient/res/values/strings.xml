@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NewsClient</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hint">HINT</string>
+    <string name="title">DAILY NEWS</string>
+    
+	<string name="comment">Comment</string>
+	<string name="submit">Submit</string>
+	<string name="search">Search</string>
+	<string name="search_news">Search News</string>
+	<string name="login">Login</string>
+	<string name="register">Register</string>
+    <string name="nick_name">NickName</string>
+    <string name="mailbox">MailBox</string>
+    <string name="password">Password</string>
+    <string name="name_hint">Your Nick Name here</string>
+    <string name="password_hint">Your Password here</string>
+    <string name="mailbox_hint">Your Mailbox address</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="related_news_title">Related News</string>
+    <string name="about">Written By Johnson Yue\n@Haerbin Institute of Technology\nEmail: johnsonyuehit@163.com\nQQ: 1257061458</string>
+    <string name="select_category">Select Category</string>
+    <string name="favourite">Favourite</string>
+    <string name="green_theme">GreenTheme</string>
+    <string name="dark_theme">DarkTheme</string>
+    <string name="confirm">Confirm</string>
+</resources>

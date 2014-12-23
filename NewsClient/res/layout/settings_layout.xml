@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/main_background_value"
+    >
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+         >
+
+        <RadioButton
+            android:id="@+id/green_theme_btn"
+            android:layout_width="wrap_content"
+        	android:layout_height="35dp"
+            android:textColor="?attr/radio_btn_text_color_value"
+            android:text="@string/green_theme"
+            android:button="?attr/check_box_background_value"
+             />
+
+		<RadioButton 
+		    android:id="@+id/dark_theme_btn"
+		    android:layout_width="wrap_content"
+        	android:layout_height="35dp"
+        	android:textColor="?attr/radio_btn_text_color_value"
+        	android:text="@string/dark_theme"
+        	android:button="?attr/check_box_background_value"
+		    />
+	</RadioGroup>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        android:background="?attr/button_color_value"
+       	android:textColor="?attr/button_text_color_value"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="40dp"
+        >
+        
+    </Button>
+    
+</RelativeLayout>

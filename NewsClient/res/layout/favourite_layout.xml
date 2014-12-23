@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/main_background_value"
+     >
+    <TextView
+        android:id="@+id/favourite_title"
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/favourite"
+    	android:textAppearance="@style/titlebar_title_style"
+    	android:background="?attr/title_bar_background_value"
+    	android:padding="8dp"
+        ></TextView>
+	<ListView
+	    android:layout_below="@id/favourite_title"
+	    android:layout_marginTop="4dp"
+	    android:id="@+id/favourite_list"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_separator"
+        android:listSelector="@drawable/list_selector"
+	    ></ListView>
+</RelativeLayout>

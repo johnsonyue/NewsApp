@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item type="drawable" name="main_background">#FFE0FFFF</item>
+    <item type="drawable" name="main_background_dark">#FF000000</item>
+    <item type="drawable" name="edit_text_background">#FFFFFF</item>
+    <item type="drawable" name="edit_text_background_dark">#FF000000</item>
+    <item type="drawable" name="newslist_item_background">#FFE7E7E7</item>
+    <item type="color" name="white">#FFFFFFFF</item>
+    <item type="color" name="category_title_normal_background">#FFADB2AD</item>
+    <item type="color" name="black">#FF000000</item>
+    <item type="color" name="blue">#FF79CDCD</item>
+    <item type="color" name="gray">#FFA6A6A6</item>
+    <item type="color" name="green">#FF00EE00</item>
+    <item type="color" name="light_gray">#FFF0F8FF</item>
+    <item type="color" name="transparent">#00000000</item>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_pager"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_marginBottom="50dp"
+        ></android.support.v4.view.ViewPager>
+    
+	<LinearLayout
+	    android:id="@+id/tabs_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:layout_alignParentBottom="true"
+	    android:background="?attr/main_background_value"
+	    >
+	    <Button
+	        android:id="@+id/btn_tab1"
+	        android:layout_width="50dp"
+	    	android:layout_height="50dp"
+	    	android:layout_weight="1"
+	        ></Button>
+	    <Button
+	        android:id="@+id/btn_tab2"
+	        android:layout_width="50dp"
+	    	android:layout_height="50dp"
+	    	android:layout_weight="1"
+	        ></Button>
+	    <Button
+	        android:id="@+id/btn_tab3"
+	        android:layout_width="50dp"
+	    	android:layout_height="50dp"
+	    	android:layout_weight="1"
+	        ></Button>
+	    <Button
+	        android:id="@+id/btn_tab4"
+	        android:layout_width="50dp"
+	    	android:layout_height="50dp"
+	    	android:layout_weight="1"
+	        ></Button>
+	</LinearLayout>
+	
+	<ImageView
+        android:id="@+id/seperator_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/separator"
+		android:layout_above="@id/tabs_layout"    
+        android:contentDescription="@string/hint"/>
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/main_background_value"
+     >
+    <TextView
+       	android:id="@+id/comment_title_text"
+       	android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:gravity="left"
+       	android:hint="@string/hint"
+       	android:textAppearance="@style/titlebar_title_style"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+    ></TextView>
+    
+    <TextView
+        android:id="@+id/comment_detail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/hint"
+        android:layout_below="@id/comment_title_text"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+    ></TextView>
+    
+    
+    
+    <ImageView
+        android:id="@+id/comment_seperator_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/separator"
+		android:layout_below="@id/comment_detail_text"
+		android:layout_marginTop="5dp"        
+        android:contentDescription="@string/hint"/>
+    
+    <ListView
+        android:id="@+id/comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment_seperator_line"
+        android:background="@color/white"
+        
+        ></ListView>
+    
+    <ProgressBar
+	    android:id="@+id/view_comment_pro_bar"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	     ></ProgressBar>
+</RelativeLayout>

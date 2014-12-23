@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/main_background_value"
+    >
+	
+    <RelativeLayout 
+        android:id="@+id/search_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+           	android:id="@+id/back_btn"
+       	 	android:layout_width="30dp"
+        	android:layout_height="30dp"
+        	android:background="@drawable/back"
+        	android:layout_alignParentLeft="true"
+        	android:layout_margin="4dp"
+            ></Button>
+        <TextView
+            android:layout_width="match_parent"
+        	android:layout_height="35dp"
+            android:text="@string/search_news"
+            android:textAppearance="@style/titlebar_title_style"
+            android:layout_gravity="center"
+            android:gravity="center"
+            ></TextView>
+    </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/search_seperator_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/separator"
+		android:layout_below="@id/search_title_bar"
+		android:layout_marginTop="5dp"        
+        android:contentDescription="@string/hint"/>
+    
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_below="@id/search_seperator_line"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+         >
+
+    <EditText
+        android:id="@+id/search_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:hint="@string/search"
+        android:background="?attr/edit_background_value"
+    	android:textColor="@color/gray"
+        ></EditText>
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/search"
+        android:layout_marginLeft="-50dp"
+        ></Button>
+	</LinearLayout>
+	
+    <ImageView
+        android:id="@+id/search_seperator_line_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/separator"
+		android:layout_below="@id/search_bar"
+		android:layout_marginTop="5dp"        
+        android:contentDescription="@string/hint"/>
+    
+    <ListView
+        android:layout_below="@id/search_seperator_line_2"
+        android:id="@+id/result_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_separator"
+        android:listSelector="@drawable/list_selector"
+        ></ListView>
+    
+    <ProgressBar
+	    android:id="@+id/search_pro_bar"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	     ></ProgressBar>
+</RelativeLayout>
