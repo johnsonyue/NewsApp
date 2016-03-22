@@ -7,4 +7,4 @@ NewsClientBeta为客户端源码，NewsServerBeta为服务器端源码，NewsCap
 2014-12-12 实现相似度比较。
 2014-12-17 实现下拉刷新，上拉加载，新闻收藏，滑动切换等功能。
 2014-12-20 实现主题切换功能。
-2014-12-23 发布到豌豆荚，http://www.wandoujia.com/;jsessionid=mf58wamc5wqf5k72o3sgh4ax
+2014-12-23 发布到豌豆荚，http://www.wandoujia.com/apps/%20johnsonyue.project.newsclient
